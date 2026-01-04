@@ -1,10 +1,21 @@
 # ===============================
-# Node modules (frontend + backend)
+# Node modules
 # ===============================
 /frontend/node_modules
 /backend/node_modules
 /.pnp
 .pnp.js
+
+# ===============================
+# Production builds
+# ===============================
+/frontend/build
+
+# ===============================
+# Environment files
+# ===============================
+/frontend/.env*
+/backend/.env*
 
 # ===============================
 # Logs
@@ -14,42 +25,15 @@ yarn-debug.log*
 yarn-error.log*
 
 # ===============================
-# Production build (React frontend)
-# ===============================
-/frontend/build
-
-# ===============================
-# Environment files (local secrets)
-# ===============================
-/frontend/.env
-/frontend/.env.local
-/frontend/.env.development.local
-/frontend/.env.test.local
-/frontend/.env.production.local
-
-/backend/.env
-/backend/.env.local
-/backend/.env.development.local
-/backend/.env.test.local
-/backend/.env.production.local
-
-# ===============================
-# Coverage reports
+# Coverage
 # ===============================
 /frontend/coverage
 /backend/coverage
 
 # ===============================
-# MacOS system files
+# OS files
 # ===============================
 .DS_Store
-
-# ===============================
-# IDE/Editor files (optional)
-# ===============================
-# .vscode/
-# *.sublime-project
-# *.sublime-workspace
 
 # ===============================
 # Misc
