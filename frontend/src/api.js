@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "http://localhost:5000/api"
+  baseURL: "https://category-management-dashboard-wwtk.onrender.com/api"
 });
 
 API.interceptors.request.use(req => {
@@ -17,7 +17,7 @@ API.interceptors.response.use(
   err => {
     if (err.response?.status === 401) {
       localStorage.removeItem("token");
-      window.location = "/login";
+      window.location.href = "/login";
     }
     return Promise.reject(err);
   }

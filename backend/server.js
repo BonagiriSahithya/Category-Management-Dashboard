@@ -8,14 +8,20 @@ const categoryRoutes = require("./routes/categoryRoutes");
 
 const app = express();
 
+/* Middleware */
 app.use(cors());
 app.use(express.json());
 
+/* Routes */
 app.use("/api/auth", authRoutes);
 app.use("/api/categories", categoryRoutes);
 
+/* DB */
 connectDB();
 
-app.listen(process.env.PORT, () =>
-  console.log("Server running on port", process.env.PORT)
-);
+/* PORT FIX */
+const PORT = process.env.PORT || 5000;
+
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
